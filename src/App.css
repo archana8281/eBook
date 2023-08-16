@@ -1,38 +1,114 @@
 .App {
-  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/**header **/
+.header {
+  margin: 10px 0;
+  /* position: fixed; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-end;
+  column-gap: 250px;
+}
+
+.icon-head {
+
+  font-weight: 700;
+  font-size: 30px;
+}
+
+input[type="search"] {
+  height: 40px;
+  width: 400px;
+  border-radius: 10px;
+  padding: 0 10px;
+  border-color: #05054a;
+}
+
+.header button {
+  height: 40px;
+  width: 100px;
+  background-color: #05054a;
   color: white;
+  font-size: large;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+/** login-pg **/
+.login-form {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 3px solid #05054a;
+  border-radius: 8px;
+  width: 400px;
+  height: 500px;
+  margin: 70px auto;
+  color: #05054a;
+  box-sizing: border-box;
+  padding: 30px 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input1 {
+  width: 300px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: whitesmoke;
+  margin-bottom: 15px;
+}
+
+.btn {
+  height: 40px;
+  width: 300px;
+  background-color: #05054a;
+  color: white;
+  font-size: larger;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px
+}
+
+.login-form a {
+  color: #05054a;
+  font-weight: 700;
+}
+
+/** home **/
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 400px;
+  background-color: #d2cdd929;
+  color: #05054a;
+  padding: 60px;
+}
+ h1{
+  font-size: 45px;
+  color: #05054a;
+ 
+}
+.learn-img{
+  width: 400px;
+  height: 300px;
+  border-radius: 8px;
+  filter: drop-shadow(8px 8px 10px gray);
+}
+.platform{
+  height: 600px;
+  background-color: aliceblue;
+  padding-top: 30px;
+  text-align: center;
 }
