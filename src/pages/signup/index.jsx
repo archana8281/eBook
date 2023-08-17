@@ -5,12 +5,19 @@ function Signup() {
   return (
     <div>
       <Header />
+      {/* <video autoplay muted loop id="myVideo">
+  <source src="/images/vidback.mp4" type="video/mp4"/>
+</video> */}
       <div className="login-form">
         <h3>Sign up and start learning</h3>
         <form action="" method="post">
           <label htmlFor="fname">Full name</label>
           <br />
           <input type="text" name="fname" className="input1" required />
+          <br />
+          <label htmlFor="subject">Subject</label>
+          <br />
+          <input type="text" name="subject" className="input1" required />
           <br />
           <label htmlFor="email">Email</label>
           <br />

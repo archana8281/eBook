@@ -8,7 +8,7 @@ function Banner() {
     <div style={{ margin: "20px 0" }}>
       <Carousel autoPlay={true} showThumbs={false}>
         {BANNER.map((itm) => (
-          <div className="banner">
+          <div className="banner" key={itm.text}>
             <div className="banner-left">
               <h1>{itm.text}</h1>
               <p>{itm.para}</p>

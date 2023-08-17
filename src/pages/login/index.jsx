@@ -16,7 +16,7 @@ function Login() {
           <br />
           <input type="password" name="password" className="input1" required />
           <br />
-          <button className="btn">log in</button>
+         <a href="/view"><button className="btn">log in</button></a>
         </form>
         <hr style={{ width: "250px" }} />
         <span>

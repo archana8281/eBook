@@ -1,6 +1,8 @@
 import Home from "../pages/home";
 import Login from "../pages/login";
+import Recentview from "../pages/recentview";
 import Signup from "../pages/signup";
+import View from "../pages/user-view";
 
 const ROUTER = [
     {
@@ -14,6 +16,14 @@ const ROUTER = [
     {
         url:"/signup",
         component: Signup 
+    },
+    {
+        url:"/view",
+        component:View
+    },
+    {
+        url:"/review",
+        component:Recentview
     }
 
 ]

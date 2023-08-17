@@ -8,7 +8,7 @@ function App() {
         <Routes>
           {ROUTER.map((val) => {
             return (
-              <Route exact path={val.url} element={<val.component />}></Route>
+              <Route key={val.url} exact path={val.url} element={<val.component />}></Route>
             );
           })}
         </Routes>
