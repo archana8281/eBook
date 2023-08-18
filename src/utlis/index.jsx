@@ -125,20 +125,44 @@ const Content = [
   {
     id: 4,
     vid: (
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/w-8gEUAyjkc?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe
+        width="300"
+        height="200"
+        src="https://www.youtube.com/embed/w-8gEUAyjkc?start=1"
+        title="YouTube video player"
+        border="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
     ),
   },
   {
     id: 5,
     vid: (
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/uGCexyr4IYw?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe
+        width="300"
+        height="200"
+        src="https://www.youtube.com/embed/uGCexyr4IYw?start=1"
+        title="YouTube video player"
+        border="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
     ),
   },
   {
-    id: 3,
+    id: 6,
     vid: (
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/6vTsyJZbkug?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe
+        width="300"
+        height="200"
+        src="https://www.youtube.com/embed/6vTsyJZbkug?start=1"
+        title="YouTube video player"
+        border="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
     ),
   },
-]
+];
 export { BANNER, platform, video, Content };
