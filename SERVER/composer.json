@@ -1,0 +1,22 @@
+{
+    "name": "archana/elearning",
+    "autoload": {
+        "psr-4": {
+            "Archana\\Elearning\\": "src/",
+            "Archana\\Elearning\\Controller\\": "src/controllers/",
+            "Archana\\Elearning\\Model\\": "src/models/"
+        }
+    },
+    "authors": [
+        {
+            "name": "archana8281",
+            "email": "archanasanthoshp@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.16",
+        "doctrine/dbal": "^3.6",
+        "symfony/yaml": "^6.3",
+        "symfony/cache": "^6.3"
+    }
+}
