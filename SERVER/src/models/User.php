@@ -2,6 +2,9 @@
 
 namespace Archana\Elearning\Model;
 
+use \Firebase\JWT\JWT;
+
+
 
 class User extends Model
 {
@@ -19,7 +22,6 @@ class User extends Model
         parent::__construct();
         $this->queryBuilder = $this->conn->createQueryBuilder();
     }
-
     public function findAll()
     {
         return $this->queryBuilder->select('id', 'name')
@@ -28,13 +30,30 @@ class User extends Model
 
     public function check(string $email, string $password)
     {
-        return $this->queryBuilder->select('name', 'email','subject','password')
+        $stmt = $this->queryBuilder->select('name', 'email', 'password', 'subject')
             ->from('users')
             ->where('email = ?')
             ->andWhere('password = ?')
             ->setParameter(0, $email)
             ->setParameter(1, $password)
-            ->fetchOne() ? "true" :"false";
+            ->executeQuery()
+            ->fetchAssociative();
+            
+        $token = null;
+        if ($stmt) {
+            $secret_key = "YOUR_SECRET_KEY";
+            $algorithm = "HS256";
+            $token = array(
+                "data" => array(
+                    'name' => $stmt['name'],
+                    'email' => $stmt['email'],
+                    'subject' => $stmt['subject']
+                )
+            );
+            $jwt = JWT::encode($token, $secret_key, $algorithm);
+        }
+print_r($token);
+        return $token ? $jwt : false;
     }
 
     public function register(array $data)

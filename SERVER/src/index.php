@@ -1,4 +1,5 @@
 <?php
+
 namespace Archana\Elearning;
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -6,28 +7,38 @@ require __DIR__ . '/../vendor/autoload.php';
 use Archana\Elearning\Controller\IndexController;
 use Archana\Elearning\Controller\UserController;
 use Archana\Elearning\Controller\FavouriteController;
+use Archana\Elearning\Controller\ContentController;
 
 $urlRoot = '/ebook/SERVER/';
- $currentULI = str_replace($urlRoot, "", $_SERVER['REQUEST_URI']);
- $user = new IndexController();
+$currentULI = str_replace($urlRoot, "", $_SERVER['REDIRECT_URL']);
 
-switch($currentULI) {
+
+switch ($currentULI) {
     case 'user':
-         $user->index();
-    break;
+        $user = new IndexController();
+        $user->fetchUser();
+        break;
 
     case 'user/register':
-         $user->Insert();
-    break;
+        $user = new IndexController();
+        $user->Insert();
+        break;
 
     case 'user/login':
+        $user = new IndexController();
         $user->userCheck();
         break;
 
     case 'user/list':
         $user = new UserController();
         $user->list();
-    break;
+        break;
+
+    case 'user/data':
+        $content = new ContentController();
+        $subject = $_GET['subject'];
+        $content->fetchSub($subject);
+        break;
 
     case 'fav':
         $fav = new FavouriteController();
@@ -36,6 +47,6 @@ switch($currentULI) {
 
     default:
         $index = new IndexController();
-         $index->index();
-    break;
+        $index->fetchUser();
+        break;
 }

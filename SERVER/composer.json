@@ -17,6 +17,9 @@
         "doctrine/orm": "^2.16",
         "doctrine/dbal": "^3.6",
         "symfony/yaml": "^6.3",
-        "symfony/cache": "^6.3"
+        "symfony/cache": "^6.3",
+        "firebase/php-jwt": "^6.8",
+        "phpmailer/phpmailer": "^6.8",
+        "league/oauth2-client": "^2.7"
     }
 }
